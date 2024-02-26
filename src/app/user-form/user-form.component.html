@@ -1,0 +1,30 @@
+<button class="retrieve-button" (click)="fetchData()">Retrieve User</button>
+
+<ng-container *ngIf="apiData !== null; else noData">
+    <div class="user-data-section">
+        <h3 class="green">User Data Retrieved</h3>
+        <button class="fill-button" (click)="fillForm()">Fill the Form</button>
+    </div>
+</ng-container>
+<ng-template #noData>
+    <div class="no-data-section">
+        <h3 class="red">NO User Data</h3>
+    </div>
+</ng-template>
+
+<div class="form-container">
+    <form [formGroup]="retrievedUserForm" (submit)="onSubmit($event)" class="form">
+        <input type="image" name="photo" [src]="retrievedUserForm.get('photo')?.value" formControlName="photo" class="photo-input"><br>
+        <label for="photo" class="photo-label">Photo</label><br><br>
+        <label for="name" class="form-label">Name:</label> <input type="text" name="name" formControlName="name" class="form-input"><br>
+        <label for="gender" class="form-label">Gender:</label> <input type="text" name="gender" formControlName="gender" class="form-input"><br>
+        <label for="email" class="form-label">Email:</label> <input type="text" name="email" formControlName="email" class="form-input"><br>
+        <label for="phone" class="form-label">Phone Number:</label> <input type="text" name="phone" formControlName="phone" class="form-input"><br>
+        <label for="city" class="form-label">City:</label> <input type="text" name="city" formControlName="city" class="form-input"><br>
+
+        <label for="country" class="form-label">Country:</label> <input type="text" name="country" formControlName="country" class="form-input"><br>
+        <button type="submit" [disabled]="!retrievedUserForm.valid" class="submit-button" (click)="formSubmit()">Submit</button>
+        <button (click)="clearForm()" class="clear-button">Clear Form</button>
+    </form>
+    <h3 class="message">{{msg}}</h3>
+</div>

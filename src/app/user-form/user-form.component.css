@@ -1,0 +1,73 @@
+.retrieve-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .user-data-section {
+    margin-bottom: 20px;
+  }
+  
+  .fill-button {
+    padding: 5px 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .no-data-section {
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    max-width: fit-content;
+  }
+  
+  .form {
+    margin-bottom: 20px;
+  }
+  
+  .photo-input {
+    padding: 3px;
+    border: solid skyblue 2px;
+    margin-bottom: 5px;
+  }
+  
+  .photo-label {
+    padding: 30px;
+    padding-bottom: 60px;
+  }
+  
+  .form-label {
+    margin-right: 10px;
+  }
+  
+  .form-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-button, .clear-button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .message {
+    font-style: italic;
+    color: #888;
+  }
+  
